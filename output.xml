@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230514 10:12:39.810" rpa="false" schemaversion="3">
+<suite id="s1" name="Checkoutitems" source="d:\Course\RobotFramework\Source\SampleEcommerceRobotBDD\tests\checkoutitems.robot">
+<test id="s1-t1" name="User Login To Apps" line="6">
+<kw name="Given User Open Website" library="Steps">
+<kw name="Go To Apps" library="Common">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230514 10:12:40.460" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20230514 10:12:40.478" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230514 10:12:40.459" endtime="20230514 10:12:42.692"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230514 10:12:42.692" endtime="20230514 10:12:42.821"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${titleLoginPg}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230514 10:12:42.822" endtime="20230514 10:12:42.861"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:40.458" endtime="20230514 10:12:42.861"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:40.457" endtime="20230514 10:12:42.861"/>
+</kw>
+<kw name="When User Input Username" library="Steps">
+<kw name="Input Field Username" library="LoginPg">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${usernameInputLoginPg}</arg>
+<arg>${standardUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:42.870" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230514 10:12:42.869" endtime="20230514 10:12:43.038"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:42.866" endtime="20230514 10:12:43.039"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:42.863" endtime="20230514 10:12:43.039"/>
+</kw>
+<kw name="When User Input Password" library="Steps">
+<kw name="Input Field Password" library="LoginPg">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordInputLoginPg}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.044" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.043" endtime="20230514 10:12:43.140"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.042" endtime="20230514 10:12:43.141"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.041" endtime="20230514 10:12:43.141"/>
+</kw>
+<kw name="When User Click Login Button" library="Steps">
+<kw name="Click Login Button" library="LoginPg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButtonLoginPg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.144" level="INFO">Clicking element 'id:login-button'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.143" endtime="20230514 10:12:43.245"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.142" endtime="20230514 10:12:43.248"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.142" endtime="20230514 10:12:43.249"/>
+</kw>
+<kw name="Then User Should See Home Page" library="Steps">
+<kw name="Verify Home Page" library="HomePg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleHomePg}</arg>
+<arg>Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.254" level="INFO">Verifying element 'class:app_logo' contains exact text 'Swag Labs'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.253" endtime="20230514 10:12:43.304"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.252" endtime="20230514 10:12:43.304"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.250" endtime="20230514 10:12:43.304"/>
+</kw>
+<doc>User Login To Apps</doc>
+<status status="PASS" starttime="20230514 10:12:40.454" endtime="20230514 10:12:43.305"/>
+</test>
+<test id="s1-t2" name="User Add Items To Cart" line="14">
+<kw name="Given User On Home Page" library="Steps">
+<kw name="Verify Home Page" library="HomePg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleHomePg}</arg>
+<arg>Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.310" level="INFO">Verifying element 'class:app_logo' contains exact text 'Swag Labs'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.309" endtime="20230514 10:12:43.331"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.309" endtime="20230514 10:12:43.331"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.308" endtime="20230514 10:12:43.332"/>
+</kw>
+<kw name="When User Add Item 1 To Cart" library="Steps">
+<kw name="Add Item 1" library="HomePg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCartItem1HomePg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.336" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.334" endtime="20230514 10:12:43.401"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.334" endtime="20230514 10:12:43.401"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.333" endtime="20230514 10:12:43.402"/>
+</kw>
+<kw name="When User Add Item 2 To Cart" library="Steps">
+<kw name="Add Item 2" library="HomePg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCartItem2HomePg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.405" level="INFO">Clicking element 'id:add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.404" endtime="20230514 10:12:43.506"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.404" endtime="20230514 10:12:43.506"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.403" endtime="20230514 10:12:43.507"/>
+</kw>
+<kw name="When User Click Cart Button" library="Steps">
+<kw name="Click Cart Button" library="HomePg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cartButtonHomePg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.510" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.509" endtime="20230514 10:12:43.581"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.508" endtime="20230514 10:12:43.582"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.507" endtime="20230514 10:12:43.583"/>
+</kw>
+<kw name="Then User Should See Your Cart Page" library="Steps">
+<kw name="Verify Cart Page" library="CartPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCartPg}</arg>
+<arg>Your Cart</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.589" level="INFO">Verifying element 'class:title' contains exact text 'Your Cart'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.588" endtime="20230514 10:12:43.617"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.586" endtime="20230514 10:12:43.617"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.584" endtime="20230514 10:12:43.618"/>
+</kw>
+<doc>User Add Items To Cart</doc>
+<status status="PASS" starttime="20230514 10:12:43.307" endtime="20230514 10:12:43.618"/>
+</test>
+<test id="s1-t3" name="User Checkout Items" line="22">
+<kw name="Given User On Your Cart Page" library="Steps">
+<kw name="Verify Cart Page" library="CartPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCartPg}</arg>
+<arg>Your Cart</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.623" level="INFO">Verifying element 'class:title' contains exact text 'Your Cart'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.623" endtime="20230514 10:12:43.638"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.622" endtime="20230514 10:12:43.638"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.622" endtime="20230514 10:12:43.639"/>
+</kw>
+<kw name="When User Click Checkout Button" library="Steps">
+<kw name="Click Checkout Button" library="CartPg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkoutButtonCartPg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.641" level="INFO">Clicking element 'id:checkout'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.640" endtime="20230514 10:12:43.691"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.640" endtime="20230514 10:12:43.691"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.639" endtime="20230514 10:12:43.692"/>
+</kw>
+<kw name="Then User Should See Checkout - Your Information Page" library="Steps">
+<kw name="Verify CYI Page" library="CYIPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCYIPg}</arg>
+<arg>Checkout: Your Information</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.695" level="INFO">Verifying element 'class:title' contains exact text 'Checkout: Your Information'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.695" endtime="20230514 10:12:43.718"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.694" endtime="20230514 10:12:43.719"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.693" endtime="20230514 10:12:43.719"/>
+</kw>
+<doc>User Checkout Items</doc>
+<status status="PASS" starttime="20230514 10:12:43.621" endtime="20230514 10:12:43.720"/>
+</test>
+<test id="s1-t4" name="User Fill Information" line="28">
+<kw name="Given User On Checkout - Your Information Page" library="Steps">
+<kw name="Verify CYI Page" library="CYIPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCYIPg}</arg>
+<arg>Checkout: Your Information</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:43.724" level="INFO">Verifying element 'class:title' contains exact text 'Checkout: Your Information'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.724" endtime="20230514 10:12:43.742"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.723" endtime="20230514 10:12:43.742"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.722" endtime="20230514 10:12:43.742"/>
+</kw>
+<kw name="When User Input First Name" library="Steps">
+<kw name="Input First Name" library="CYIPg">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${firstNameCYIPg}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.745" level="INFO">Typing text 'Mohamad' into text field 'id:first-name'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.744" endtime="20230514 10:12:43.847"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.744" endtime="20230514 10:12:43.848"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.743" endtime="20230514 10:12:43.848"/>
+</kw>
+<kw name="When User Input Last Name" library="Steps">
+<kw name="Input Last Name" library="CYIPg">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${lastNameCYIPg}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.851" level="INFO">Typing text 'Arga' into text field 'id:last-name'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.850" endtime="20230514 10:12:43.939"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.849" endtime="20230514 10:12:43.939"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.849" endtime="20230514 10:12:43.940"/>
+</kw>
+<kw name="When User Input Postal Code" library="Steps">
+<kw name="Input Postal Code" library="CYIPg">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${postalCodeCYIPg}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:43.943" level="INFO">Typing text '43122' into text field 'id:postal-code'.</msg>
+<status status="PASS" starttime="20230514 10:12:43.942" endtime="20230514 10:12:44.028"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.942" endtime="20230514 10:12:44.030"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:43.941" endtime="20230514 10:12:44.031"/>
+</kw>
+<kw name="When User Click Continue Button" library="Steps">
+<kw name="Click Continue Button" library="CYIPg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButtonCYIPg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:44.038" level="INFO">Clicking element 'id:continue'.</msg>
+<status status="PASS" starttime="20230514 10:12:44.037" endtime="20230514 10:12:44.101"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.034" endtime="20230514 10:12:44.102"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.032" endtime="20230514 10:12:44.102"/>
+</kw>
+<kw name="Then User Should See Checkout - Overview Page" library="Steps">
+<kw name="Verify CO Page" library="COPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCOPg}</arg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:44.107" level="INFO">Verifying element 'class:title' contains exact text 'Checkout: Overview'.</msg>
+<status status="PASS" starttime="20230514 10:12:44.107" endtime="20230514 10:12:44.124"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.106" endtime="20230514 10:12:44.124"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.103" endtime="20230514 10:12:44.124"/>
+</kw>
+<doc>User Fill Information</doc>
+<status status="PASS" starttime="20230514 10:12:43.721" endtime="20230514 10:12:44.125"/>
+</test>
+<test id="s1-t5" name="User Checkout Confirmation" line="37">
+<kw name="Given User On Checkout - Overview Page" library="Steps">
+<kw name="Verify CO Page" library="COPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCOPg}</arg>
+<arg>Checkout: Overview</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:44.131" level="INFO">Verifying element 'class:title' contains exact text 'Checkout: Overview'.</msg>
+<status status="PASS" starttime="20230514 10:12:44.129" endtime="20230514 10:12:44.182"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.128" endtime="20230514 10:12:44.183"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.128" endtime="20230514 10:12:44.183"/>
+</kw>
+<kw name="When User Click Finish Button" library="Steps">
+<kw name="Click Finish Button" library="COPg">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${finishButtonCOPg}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230514 10:12:44.188" level="INFO">Clicking element 'id:finish'.</msg>
+<status status="PASS" starttime="20230514 10:12:44.187" endtime="20230514 10:12:44.242"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.186" endtime="20230514 10:12:44.243"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.185" endtime="20230514 10:12:44.243"/>
+</kw>
+<kw name="Then User Should See Checkout - Complete Page" library="Steps">
+<kw name="Verify CC Page" library="CCPg">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${titleCCPg}</arg>
+<arg>Thank you for your order!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230514 10:12:44.251" level="INFO">Verifying element 'class:complete-header' contains exact text 'Thank you for your order!'.</msg>
+<status status="PASS" starttime="20230514 10:12:44.250" endtime="20230514 10:12:44.274"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.246" endtime="20230514 10:12:44.275"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230514 10:12:44.382" level="INFO" html="true">&lt;a href="screenshot_1.jpg"&gt;&lt;img src="screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230514 10:12:44.275" endtime="20230514 10:12:44.383"/>
+</kw>
+<kw name="Close Apps" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230514 10:12:44.384" endtime="20230514 10:12:46.604"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.384" endtime="20230514 10:12:46.605"/>
+</kw>
+<status status="PASS" starttime="20230514 10:12:44.244" endtime="20230514 10:12:46.605"/>
+</kw>
+<doc>User Checkout Confirmation</doc>
+<status status="PASS" starttime="20230514 10:12:44.127" endtime="20230514 10:12:46.606"/>
+</test>
+<doc>Checkout Items E2E</doc>
+<status status="PASS" starttime="20230514 10:12:39.820" endtime="20230514 10:12:46.610"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Checkoutitems">Checkoutitems</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
